@@ -1,0 +1,77 @@
+@charset 'utf-8';
+
+html,body{
+    height:100%;
+}
+body{
+    background:#023b3b url("../img/bg.png") no-repeat center;
+    overflow:hidden;
+    perspective:800px;
+}
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:0;
+    height:0;
+    transform-style:preserve-3d;
+    transform:translateZ(-1500px);
+}
+.container li{
+    position:absolute;
+    top:-80px;
+    left:-60px;
+    width:120px;
+    height:160px;
+    border:1px solid rgba(127,255,255,0.25);
+    background:rgba(0,127,127,0.5);
+    box-shadow:0 0 12px rgba(0,255,255,0.5);
+    cursor:pointer;
+    transition:transform 3s ease-in-out;
+}
+.container li:hover{
+    box-shadow:0 0 12px rgba(0,255,255,0.75);
+    border:1px solid rgba(127,255,255,0.75);
+}
+.container li p{
+    font:bold 16px "Microsoft YaHei";
+    text-align:center;
+}
+.container li p.title{
+    color:rgba(255,255,255,0.7);
+    font-size:60px;
+    text-shadow:0 0 20px rgba(0,255,255,0.5);
+}
+.container li p.author,.container li p.time{
+    color:rgba(127,255,255,0.75);
+    text-shadow:0 0 20px rgba(127,255,255,0.75);
+    line-height:30px;
+}
+/*=====  Btn list =====*/
+.btn-list{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    transition:all 1s;
+}
+.btn-list.hide{
+    left:-500px;
+    bottom:-100px;
+    transform:scale(1.5);
+}
+.btn-list li{
+    float:left;
+    height:35px;
+    margin-left:5px;
+    padding:0 15px;
+    border:1px solid #60c2c2;
+    border-radius:3px;
+    color:#60c2c2;
+    font:bold 12px "Microsoft YaHei";
+    text-align:center;
+    line-height:35px;
+    cursor:pointer;
+}
+.btn-list li:hover{
+    background-color:rgba(0,255,255,0.5);
+}
